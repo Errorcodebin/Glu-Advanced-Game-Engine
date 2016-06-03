@@ -2,14 +2,14 @@
 
 namespace GameEngine
 {
-    class Component
+    public class Component
     {
         /* TODO implement
         public Transform transform;
         public BaseBehavior gameObject;
         */
 
-        private Component()
+        protected Component()
         {
             Awake();
         }
