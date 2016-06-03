@@ -67,7 +67,7 @@ namespace GameEngine
         {
             float H = hue;
 
-            if (H < 0) { H = (H % 360) + 360; };
+            if (H < 0) { H = -(Math.Abs(H) % 360); };
             if (H >= 360) { H = H % 360; };
 
             float R, G, B;
