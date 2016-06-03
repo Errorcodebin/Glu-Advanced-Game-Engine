@@ -105,7 +105,7 @@
     <Compile Include="Engine\Essentials\Static Classes\Screen.cs" />
     <Compile Include="Engine\Essentials\Structs\Color.cs" />
     <Compile Include="Engine\Essentials\Structs\Font.cs" />
-    <Compile Include="Engine\Essentials\Structs\GameObject.cs" />
+    <Compile Include="Engine\Essentials\Structs\BaseBehavior.cs" />
     <Compile Include="Engine\Essentials\Structs\Rectangle.cs" />
     <Compile Include="Engine\Essentials\Structs\Vector2.cs" />
     <Compile Include="Game\XYZ.cs" />
