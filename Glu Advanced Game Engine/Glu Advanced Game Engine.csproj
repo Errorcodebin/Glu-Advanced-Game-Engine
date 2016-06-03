@@ -93,9 +93,9 @@
     <Compile Include="Engine\Core\Managers\AudioManager.cs" />
     <Compile Include="Engine\Core\Managers\GameObjectManager.cs" />
     <Compile Include="Engine\Core\Managers\InputManager.cs" />
-    <Compile Include="Engine\Core\Objects\Audio.cs" />
-    <Compile Include="Engine\Core\Objects\Bitmap.cs" />
-    <Compile Include="Engine\Core\Objects\Button.cs" />
+    <Compile Include="Engine\Essentials\Objects\Audio.cs" />
+    <Compile Include="Engine\Essentials\Objects\Bitmap.cs" />
+    <Compile Include="Engine\Essentials\Objects\Button.cs" />
     <Compile Include="Engine\Core\Static Classes\SystemDebug.cs" />
     <Compile Include="Engine\Essentials\Components\Component.cs" />
     <Compile Include="Engine\Essentials\Components\Transform.cs" />
@@ -105,7 +105,7 @@
     <Compile Include="Engine\Essentials\Static Classes\Screen.cs" />
     <Compile Include="Engine\Essentials\Structs\Color.cs" />
     <Compile Include="Engine\Essentials\Structs\Font.cs" />
-    <Compile Include="Engine\Essentials\Structs\BaseBehavior.cs" />
+    <Compile Include="Engine\Essentials\Objects\BaseBehavior.cs" />
     <Compile Include="Engine\Essentials\Structs\Rectangle.cs" />
     <Compile Include="Engine\Essentials\Structs\Vector2.cs" />
     <Compile Include="Game\XYZ.cs" />
@@ -123,6 +123,9 @@
     <Content Include="libmp3lame.64.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Engine\Core\Objects\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
