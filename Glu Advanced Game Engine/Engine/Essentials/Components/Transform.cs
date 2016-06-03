@@ -32,6 +32,7 @@ namespace GameEngine
             get { return m_Scale; }
             private set { m_Scale = value; }
         }
+
         public void Rotate(float degrees)
         {
             m_Rotation += degrees;
@@ -42,7 +43,7 @@ namespace GameEngine
             m_DeltaPosition += translation;
         }
 
-        protected override void Awake()
+        public override void Awake()
         {
             m_DeltaPosition = Vector2.zero;
             m_Position = Vector2.zero;
@@ -50,7 +51,7 @@ namespace GameEngine
             m_Rotation = 0f;
         }
 
-        protected override void UpdateLate()
+        public override void UpdateLate()
         {
             m_PreviousPosition = m_Position;
             m_Position = m_DeltaPosition;

@@ -9,7 +9,7 @@ namespace GameEngine
         public BaseBehavior gameObject;
         */
 
-        protected Component()
+        public Component()
         {
             Awake();
         }
@@ -19,22 +19,22 @@ namespace GameEngine
             Destroy();
         }
 
-        protected virtual void UpdateEarly() { }
-        protected virtual void Update() { }
-        protected virtual void UpdateLate() { }
+        public virtual void UpdateEarly() { }
+        public virtual void Update() { }
+        public virtual void UpdateLate() { }
 
-        protected virtual void Awake() { }
-        
+        public virtual void Awake() { }
+
         // Disabled temporarily until we have
         // found a nice spot to invoke this from
-        protected virtual void Start() {}
+        public virtual void Start() {}
 
-        protected virtual void PaintEarly() { }
-        protected virtual void Paint() { }
-        protected virtual void PaintLate() { }
+        public virtual void PaintEarly() { }
+        public virtual void Paint() { }
+        public virtual void PaintLate() { }
 
-        protected virtual void Destroy() { }
-        protected virtual void OnComponentAdd(Component component) { }
-        protected virtual void OnComponentRemove(Component component) { }
+        public virtual void Destroy() { }
+        public virtual void OnComponentAdd(Component component) { }
+        public virtual void OnComponentRemove(Component component) { }
     }
 }
