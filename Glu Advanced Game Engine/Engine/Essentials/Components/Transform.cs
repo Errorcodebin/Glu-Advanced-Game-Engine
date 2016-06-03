@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameEngine
 {
-    class Transform : Component
+    public class Transform : Component
     {
         private Vector2 m_Position;
         private Vector2 m_DeltaPosition;

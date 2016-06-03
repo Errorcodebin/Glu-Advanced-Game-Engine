@@ -3,16 +3,28 @@ using System.Collections.Generic;
 
 namespace GameEngine.Core
 {
-    class ComponentManager
+    public class ComponentManager
     {
-        public List<Component> m_components = new List<Component>();
+        private List<Component> m_components = new List<Component>();
+        private GameObject m_GameObject;
 
-        public void addComponent(Component component)
+        public ComponentManager(GameObject gameobject)
         {
+            m_GameObject = gameobject;
+        }
+
+        private void SortByExecutionOrder()
+        {
+
+        }
+
+        public void Add<t>() where t : Component
+        {
+            t component = default(t);
             m_components.Add(component);
         }
 
-        public t getComponent<t>(Component component) where t : Component
+        public t Get<t>() where t : Component
         {
             t result = (t)from c in m_components where c.GetType() == typeof(t) select c;
 
@@ -20,14 +32,49 @@ namespace GameEngine.Core
             else return default(t);
         }
 
+        public void Remove<t>() where t : Component
+        {
+            foreach (Component c in m_components)
+            {
+                if (c.GetType() == typeof(t))
+                {
+                    m_components.Remove(c);
+                    break;
+                }
+            }
+        }
+
+        public bool Contains<t>() where t : Component
+        {
+            foreach (Component c in m_components)
+            {
+                if (c.GetType() == typeof(t))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public void Update()
         {
             foreach (Component C in m_components)
             {
-
+                C.UpdateEarly();
+                C.Update();
+                C.UpdateLate();
             }
         }
 
-        public void Draw();
+        public void Paint()
+        {
+            foreach (Component C in m_components)
+            {
+                C.PaintEarly();
+                C.Paint();
+                C.PaintLate();
+            }
+
+        }
     }
 }

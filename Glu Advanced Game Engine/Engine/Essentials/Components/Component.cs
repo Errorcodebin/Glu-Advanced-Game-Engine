@@ -1,13 +1,12 @@
-﻿
+﻿using GameEngine.Core;
 
 namespace GameEngine
 {
     public class Component
     {
-        /* TODO implement
         public Transform transform;
-        public BaseBehavior gameObject;
-        */
+        public GameObject gameObject;
+        public int ExecutionOrder;
 
         public Component()
         {
@@ -24,10 +23,7 @@ namespace GameEngine
         public virtual void UpdateLate() { }
 
         public virtual void Awake() { }
-
-        // Disabled temporarily until we have
-        // found a nice spot to invoke this from
-        public virtual void Start() {}
+        //public virtual void Start() {}
 
         public virtual void PaintEarly() { }
         public virtual void Paint() { }
