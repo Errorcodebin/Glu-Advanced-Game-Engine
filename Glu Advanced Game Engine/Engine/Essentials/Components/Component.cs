@@ -8,18 +8,33 @@ namespace GameEngine
         public Transform transform;
         public BaseBehavior gameObject;
         */
-        public virtual void UpdateEarly() { }
-        public virtual void Update() { }
-        public virtual void UpdateLate() { }
 
-        public virtual void Start() { }
+        private Component()
+        {
+            Awake();
+        }
 
-        public virtual void PaintEarly() { }
-        public virtual void Paint() { }
-        public virtual void PaintLate() { }
+        ~Component()
+        {
+            Destroy();
+        }
 
-        public virtual void Destroy() { }
-        public virtual void OnComponentAdd(Component component) { }
-        public virtual void OnComponentRemove(Component component) { }
+        protected virtual void UpdateEarly() { }
+        protected virtual void Update() { }
+        protected virtual void UpdateLate() { }
+
+        protected virtual void Awake() { }
+        
+        // Disabled temporarily until we have
+        // found a nice spot to invoke this from
+        protected virtual void Start() {}
+
+        protected virtual void PaintEarly() { }
+        protected virtual void Paint() { }
+        protected virtual void PaintLate() { }
+
+        protected virtual void Destroy() { }
+        protected virtual void OnComponentAdd(Component component) { }
+        protected virtual void OnComponentRemove(Component component) { }
     }
 }
