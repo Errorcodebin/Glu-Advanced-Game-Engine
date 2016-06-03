@@ -90,9 +90,10 @@
     <Compile Include="Engine\Core\Classes\Window.cs" />
     <Compile Include="Engine\Core\GameEngine.cs" />
     <Compile Include="Engine\Core\Main.cs" />
-    <Compile Include="Engine\Core\Managers\AudioManager.cs" />
-    <Compile Include="Engine\Core\Managers\GameObjectManager.cs" />
-    <Compile Include="Engine\Core\Managers\InputManager.cs" />
+    <Compile Include="Engine\Core\Classes\Managers\AudioManager.cs" />
+    <Compile Include="Engine\Core\Classes\Managers\ComponentManager.cs" />
+    <Compile Include="Engine\Core\Classes\Managers\GameObjectManager.cs" />
+    <Compile Include="Engine\Core\Classes\Managers\InputManager.cs" />
     <Compile Include="Engine\Essentials\Objects\Audio.cs" />
     <Compile Include="Engine\Essentials\Objects\Bitmap.cs" />
     <Compile Include="Engine\Essentials\Objects\Button.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="Engine\Essentials\Components\Component.cs" />
     <Compile Include="Engine\Essentials\Components\Transform.cs" />
     <Compile Include="Engine\Essentials\Drawing\Brushes.cs" />
+    <Compile Include="Engine\Essentials\Objects\GameObject.cs" />
     <Compile Include="Engine\Essentials\Static Classes\Debug.cs" />
     <Compile Include="Engine\Essentials\Static Classes\Draw.cs" />
     <Compile Include="Engine\Essentials\Static Classes\Screen.cs" />
