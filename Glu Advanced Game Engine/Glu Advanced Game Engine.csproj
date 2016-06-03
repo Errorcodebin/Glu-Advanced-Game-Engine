@@ -43,10 +43,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Engine\Core\AbstractGame.cs" />
+    <Compile Include="Engine\Core\Classes\Renderer.cs" />
+    <Compile Include="Engine\Core\Classes\Window.cs" />
+    <Compile Include="Engine\Core\GameEngine.cs" />
+    <Compile Include="Engine\Core\Main.cs" />
+    <Compile Include="Engine\Core\Managers\AudioManager.cs" />
+    <Compile Include="Engine\Core\Managers\GameObjectManager.cs" />
+    <Compile Include="Engine\Core\Managers\InputManager.cs" />
+    <Compile Include="Engine\Core\Objects\Audio.cs" />
+    <Compile Include="Engine\Core\Objects\Bitmap.cs" />
+    <Compile Include="Engine\Core\Objects\Button.cs" />
+    <Compile Include="Engine\Core\Static Classes\SystemDebug.cs" />
+    <Compile Include="Engine\Essentials\Components\Component.cs" />
+    <Compile Include="Engine\Essentials\Components\Transform.cs" />
+    <Compile Include="Engine\Essentials\Drawing\Brushes.cs" />
+    <Compile Include="Engine\Essentials\Static Classes\Debug.cs" />
+    <Compile Include="Engine\Essentials\Static Classes\Draw.cs" />
+    <Compile Include="Engine\Essentials\Static Classes\Screen.cs" />
+    <Compile Include="Engine\Essentials\Structs\Color.cs" />
+    <Compile Include="Engine\Essentials\Structs\Font.cs" />
+    <Compile Include="Engine\Essentials\Structs\GameObject.cs" />
+    <Compile Include="Engine\Essentials\Structs\Rectangle.cs" />
+    <Compile Include="Engine\Essentials\Structs\Vector2.cs" />
+    <Compile Include="Game\XYZ.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
