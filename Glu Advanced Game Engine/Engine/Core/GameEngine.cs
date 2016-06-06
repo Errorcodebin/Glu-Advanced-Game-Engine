@@ -59,14 +59,18 @@ namespace GameEngine
             {
                 Debug.LogError("We are trying to run an undefined game!");
                 return;
+
             }
+            //Initialize the engine (window)
+            m_Window = new Window();
 
             //Initialize the game
             m_GameObjectManager.InitializeGameObjects();
 
-            //Initialize the engine (window)
-            m_Window = new Window();
-            m_Window.Create(-1, 0);
+            //Create window
+            m_Window.Create();
+
+            // Initialize rest of engine.
             m_Renderer = new Renderer(m_Window);
             m_RenderTarget = m_Renderer.GetRenderTarget();
 

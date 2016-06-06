@@ -7,13 +7,13 @@ namespace GameEngine
     {
         public override void GameInitialize()
         {
-            //// Set the required values
-            //GAME_ENGINE.window.SetTitle("Game Engine v1.0");
-            //GAME_ENGINE.window.SetIcon("../../Assets/icon.ico");
-            //
-            //// Set the optional values
-            //GAME_ENGINE.window.SetWidth(640);
-            //GAME_ENGINE.window.SetHeight(480);
+            // Optional settings.
+            GAME_ENGINE.window.SetTitle("Game Engine v1.0");
+            GAME_ENGINE.window.SetIcon("../../Assets/icon.ico");
+            GAME_ENGINE.window.SetWidth(640);
+            GAME_ENGINE.window.SetHeight(480);
+
+            // TODO fix initialization order in GameEngine.cs
             //GAME_ENGINE.renderer.SetBackgroundColor(49, 77, 121); //The Unity background color
         }
     }
