@@ -29,9 +29,9 @@ namespace GameEngine
             }
         }
 
-        public void AddComponent<t>() where t : Component
+        public void AddComponent(Component component)
         {
-            componentManager.Add<t>();
+            componentManager.Add(component);
         }
 
         public void RemoveComponent<t>() where t : Component

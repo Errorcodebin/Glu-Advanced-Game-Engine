@@ -56,5 +56,11 @@ namespace GameEngine
             m_PreviousPosition = m_Position;
             m_Position = m_DeltaPosition;
         }
+
+        public override void Paint()
+        {
+            Draw.SetColor(Color.Red);
+            Draw.Line(0, 0, Screen.width, Screen.height);
+        }
     }
 }

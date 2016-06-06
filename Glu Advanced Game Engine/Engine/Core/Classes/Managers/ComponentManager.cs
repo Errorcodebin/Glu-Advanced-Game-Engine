@@ -18,18 +18,17 @@ namespace GameEngine.Core
 
         }
 
-        public void Add<t>() where t : Component
+        public void Add(Component component)
         {
-            t component = default(t);
             m_components.Add(component);
         }
 
         public t Get<t>() where t : Component
         {
-            t result = (t)from c in m_components where c.GetType() == typeof(t) select c;
-
-            if (result != null) return result;
-            else return default(t);
+            t result = (t)from element in m_components
+                          where element.GetType() == typeof(t)
+                          select element;
+            return result;
         }
 
         public void Remove<t>() where t : Component
@@ -74,7 +73,6 @@ namespace GameEngine.Core
                 C.Paint();
                 C.PaintLate();
             }
-
         }
     }
 }
